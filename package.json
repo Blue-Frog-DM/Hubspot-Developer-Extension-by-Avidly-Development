@@ -1,0 +1,23 @@
+{
+  "name": "hubspot-developer-extension-by-avidly-development",
+  "version": "1.0.0",
+  "description": "A Chrome extension to supercharge HubSpot development, maintained by Avidly Development.",
+  "author": "Avidly Development",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.31.0",
+    "@eslint/json": "^0.13.0",
+    "@eslint/markdown": "^7.0.0",
+    "eslint": "^8.57.1",
+    "globals": "^16.3.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  }
+}
