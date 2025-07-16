@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     const currentTab = tabs[0];
 
-    // if (!currentTab.url.includes('hubspot.com')) {
-    //     alert('This tool can only be used on HubSpot domains.');
+    // if (!currentTab.url.includes("hubspot.com")) {
+    //     alert("This tool can only be used on HubSpot domains.");
     //     return;
     // }
 
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response && response.languages && response.languages.length > 0) {
         // Clear any existing options
-        langSelect.innerHTML = '<option value="">Select Language</option>';
+        langSelect.innerHTML = "<option value=\"\">Select Language</option>";
 
         // Add available languages
         response.languages.forEach((lang) => {
