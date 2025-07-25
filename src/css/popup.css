@@ -1,16 +1,21 @@
 :root {
   --font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
-  --primary: #f76221;
-  --secondary: #ff4c22;
-  --dark: #014261;
-  --body: rgba(2, 52, 75, 0.7);
+  --primary: #fff;
+  --secondary: #53c4ff;
+  --tertiary: #f2f2f2;
+  --dark: #f2f2f2;
+  --body_bg: #191919;
 }
 
 body {
-  width: 400px;
+  width: 350px;
   padding: 16px;
   font-family: var(--font-family);
   color: var(--body);
+  background: url("../images/bf-avidly theme-hero.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -34,14 +39,29 @@ body {
   color: var(--dark);
   font-weight: 400;
   border-radius: 8px;
+  font-size: 13px;
+}
+.button__group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 .tab-btn.btn.active {
-  background: var(--primary);
-  color: white;
-  -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-  -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-  box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+background: var(--primary);
+    color: #fff;
+    -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .tab-content {
@@ -51,20 +71,30 @@ body {
   min-height: 300px;
 }
 
+.tab-content#dev-tools {
+  padding: 0;
+}
+
 .tab-content.active {
   display: block;
 }
-.tab-content .section {
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(120%) blur(10px);
-  background: hsla(0, 0%, 100%, 0.3);
+.tab-content .button-grid.section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  padding: 16px;
   border-radius: 7px;
   position: relative;
 }
 
-#dev-tools {
+/* #dev-tools {
   background: url("../images/topographic-orange.svg") center/cover;
-}
+} */
 
 #docs,
 #community {
@@ -94,8 +124,25 @@ a {
 }
 
 a:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--primary);
+  color: var(--secondary);
+  border: none!important;
+}
+
+#docs a:hover,
+#community a:hover {
+    background: var(--primary);
+    color: #fff;
+    -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1)!important;
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .btn {
@@ -114,9 +161,9 @@ a:hover {
 
 .btn-1,
 .btn-2 {
-  background: #fff;
-  border: 1px solid var(--primary);
-  color: var(--dark);
+  background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--primary);
 }
 
 .btn-1 {
@@ -132,20 +179,30 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  padding: 16px;
+  padding: 0;
   border-radius: 8px;
 }
 
 .button-grid button {
   width: 100%;
   height: auto;
+  transition: .3s ease-in-out;
+  padding: 10px;
+  padding-right: 10px;
+    padding-left: 10px;
+}
+
+.button-grid button:hover {
+background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .language-selector {
   grid-column: 1 / -1;
   display: flex;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(255, 255, 255, 0.9); */
   padding: 12px;
   border-radius: 8px;
 }
@@ -158,6 +215,7 @@ a:hover {
   background: #fff;
   color: var(--dark);
   font-family: var(--font-family);
+      background: transparent;
 }
 
 .message {
@@ -169,6 +227,19 @@ a:hover {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
   margin-top: 8px;
+  background: var(--primary);
+    color: #fff;
+    -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 /* Apply button styles to all buttons */
