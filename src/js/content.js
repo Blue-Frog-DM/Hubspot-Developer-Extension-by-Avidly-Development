@@ -1,18 +1,3 @@
-// Function to get page info from the window context
-function injectGetPageInfo() {
-    const script = document.createElement('script');
-    script.textContent = `
-        window.getHsInfo = function() {
-            return {
-                portalId: window.hsVars ? window.hsVars.portal_id : null,
-                currentLanguage: window.hsVars ? window.hsVars.language : null
-            };
-        };
-    `;
-    document.documentElement.appendChild(script);
-    script.remove();
-}
-
 // Extract portal ID and languages from hsVars and page content
 function getPageInfo() {
     let info = {
@@ -24,37 +9,37 @@ function getPageInfo() {
     // Try to get hsVars from different possible sources
     try {
         // Try direct window access
-        if (typeof window.hsVars !== 'undefined') {
+        if (typeof window.hsVars !== "undefined") {
             info.portalId = window.hsVars.portal_id;
             info.currentLanguage = window.hsVars.language;
         } else {
             // Try to find hsVars in script tags
-            const scripts = document.querySelectorAll('script');
+            const scripts = document.querySelectorAll("script");
             for (const script of scripts) {
                 const content = script.textContent;
-                if (content && content.includes('var hsVars = {')) {
+                if (content && content.includes("var hsVars = {")) {
                     const match = content.match(/var hsVars = ({[^}]+})/);
                     if (match) {
                         try {
-                            const vars = JSON.parse(match[1].replace(/([{,]\s*)(\w+):/g, '$1"$2":'));
+                            const vars = JSON.parse(match[1].replace(/([{,]\s*)(\w+):/g, "$1\"$2\":"));
                             info.portalId = vars.portal_id;
                             info.currentLanguage = vars.language;
                             break;
                         } catch (e) {
-                            console.error('Error parsing hsVars:', e);
+                            console.error("Error parsing hsVars:", e);
                         }
                     }
                 }
             }
         }
     } catch (e) {
-        console.error('Error accessing hsVars:', e);
+        console.error("Error accessing hsVars:", e);
     }
 
     // Find languages from alternate links
-    const alternateLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    const alternateLinks = document.querySelectorAll("link[rel=\"alternate\"][hreflang]");
     alternateLinks.forEach(link => {
-        const lang = link.getAttribute('hreflang');
+        const lang = link.getAttribute("hreflang");
         if (lang) {
             info.languages.add(lang);
         }
@@ -65,7 +50,7 @@ function getPageInfo() {
         info.languages.add(info.currentLanguage);
     }
 
-    console.log('Page Info:', info); // Debug log
+    console.log("Page Info:", info); // Debug log
 
     return {
         portalId: info.portalId,
@@ -76,13 +61,13 @@ function getPageInfo() {
 
 // Send page info to the extension
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === 'getPortalId') {
+    if (request.action === "getPortalId") {
         const info = getPageInfo();
         sendResponse({ portalId: info.portalId });
         return true;
     }
 
-    if (request.action === 'getLanguages') {
+    if (request.action === "getLanguages") {
         const info = getPageInfo();
         sendResponse({
             languages: info.languages,
