@@ -9,12 +9,16 @@
 <body>
     <div class="container">
         <div class="tabs">
-            <button class="tab-btn btn btn-1 active" data-tab="dev-tools">Tools</button>
-            <button class="tab-btn btn btn-1" data-tab="docs">Documentation</button>
-            <button class="tab-btn btn btn-1" data-tab="community">Community</button>
+            <button class="tab-btn btn btn-1 active" data-tab="dev-tools" id="dev-tools-tab" aria-selected="true" aria-controls="dev-tools">Tools</button>
+            <button class="tab-btn btn btn-1" data-tab="docs" id="docs-tab" aria-selected="false" aria-controls="docs">Documentation</button>
+            <button class="tab-btn btn btn-1" data-tab="community" id="community-tab" aria-selected="false" aria-controls="community">Community &amp; Support</button>
+            <button class="tab-btn btn btn-1" data-tab="utilities" id="utilities-tab" aria-selected="false" aria-controls="utilities">Utilities</button>
+            <button class="tab-btn btn btn-1" data-tab="testing" id="testing-tab" aria-selected="false" aria-controls="testing">Testing</button>
+            <button class="tab-btn btn btn-1" data-tab="debug" id="debug-tab" aria-selected="false" aria-controls="debug">Debug</button>
+            <button class="tab-btn btn btn-1" data-tab="updates" id="updates-tab" aria-selected="false" aria-controls="updates">Updates</button>
         </div>
 
-        <div class="tab-content active" id="dev-tools">
+        <div class="tab-content active" id="dev-tools" role="tabpanel" aria-labelledby="dev-tools-tab">
             <div class="button-grid section">
                 <button class="btn btn-2" id="bypassCache">Clear Cache</button>
                 <button class="btn btn-2" id="activateDev">Enable Developer Mode</button>
@@ -34,27 +38,74 @@
             </div>
         </div>
 
-        <div class="tab-content" id="docs">
+        <div class="tab-content" id="docs" role="tabpanel" aria-labelledby="docs-tab">
             <div class="section">
-                <h3>API Documentation</h3>
+                <h3>Core Development</h3>
                 <a href="https://developers.hubspot.com/docs/api/overview" target="_blank">CRM API Reference</a>
                 <a href="https://developers.hubspot.com/docs/cms/overview" target="_blank">CMS Developer Docs</a>
+                <a href="https://developers.hubspot.com/docs/cms/hubl" target="_blank">HubL Documentation</a>
+            </div>
+            <div class="section">
+                <h3>Integrations &amp; Auth</h3>
                 <a href="https://developers.hubspot.com/docs/api/webhooks" target="_blank">Webhooks Guide</a>
                 <a href="https://developers.hubspot.com/docs/api/oauth-quickstart" target="_blank">OAuth Overview</a>
             </div>
+        </div>
+
+        <div class="tab-content" id="community" role="tabpanel" aria-labelledby="community-tab">
             <div class="section">
-                <h3>Template Language</h3>
-                <a href="https://developers.hubspot.com/docs/cms/hubl" target="_blank">HubL Documentation</a>
+                <h3>Community &amp; Support</h3>
+                <a href="https://community.hubspot.com/t5/Developer-Forum/ct-p/developers" target="_blank">Developer Announcements</a>
+                <a href="https://community.hubspot.com/t5/CMS-Development/bd-p/cms-development" target="_blank">CMS Development Tips</a>
+                <a href="https://community.hubspot.com/t5/APIs-Integrations/bd-p/integration-forum" target="_blank">APIs &amp; Integrations Forum</a>
+                <a href="https://community.hubspot.com/t5/Workflows/bd-p/workflows" target="_blank">Workflow Automation Forum</a>
+                <a href="https://community.hubspot.com/t5/HubSpot-Ideas/idb-p/HubSpot_Ideas" target="_blank">HubSpot Ideas (Developer)</a>
+                <a href="https://github.com/HubSpot" target="_blank">Example Repos</a>
+                <a href="https://status.hubspot.com/" target="_blank">Status Page</a>
             </div>
         </div>
 
-        <div class="tab-content" id="community">
+        <div class="tab-content" id="utilities" role="tabpanel" aria-labelledby="utilities-tab">
             <div class="section">
-                <h3>Community Resources</h3>
-                <a href="https://community.hubspot.com/t5/Developer-Forum/ct-p/developers" target="_blank">Developer Announcements</a>
-                <a href="https://community.hubspot.com/t5/CMS-Development/bd-p/cms-development" target="_blank">CMS Development Tips</a>
-                <a href="https://community.hubspot.com/t5/APIs-Integrations/bd-p/integration-forum" target="_blank">CRM Customization Questions</a>
-                <a href="https://community.hubspot.com/t5/Workflows/bd-p/workflows" target="_blank">Workflow Automation Examples</a>
+                <h3>Utilities</h3>
+                <button class="btn btn-2" disabled title="Coming soon">Token Decoder</button>
+                <button class="btn btn-2" disabled title="Coming soon">HMAC Validator</button>
+                <button class="btn btn-2" disabled title="Coming soon">JSON Formatter</button>
+                <button class="btn btn-2" disabled title="Coming soon">Rate Limit Checker</button>
+                <div class="message">Planned feature</div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="testing" role="tabpanel" aria-labelledby="testing-tab">
+            <div class="section">
+                <h3>Portal Switcher</h3>
+                <select disabled>
+                    <option>Sandbox</option>
+                    <option>Production</option>
+                </select>
+                <div class="message">Planned feature</div>
+            </div>
+            <div class="section">
+                <h3>API GET Tester</h3>
+                <input type="text" placeholder="Enter endpoint" disabled />
+                <button class="btn btn-2" disabled title="Coming soon">Send</button>
+                <div class="message">Planned feature</div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="debug" role="tabpanel" aria-labelledby="debug-tab">
+            <div class="section">
+                <h3>Debug</h3>
+                <p>Network/console filters for api.hubspot.com coming soon.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="updates" role="tabpanel" aria-labelledby="updates-tab">
+            <div class="section">
+                <h3>Updates</h3>
+                <ul>
+                    <li>HubSpot changelog, breaking-change notices, and RSS integration coming soon.</li>
+                </ul>
             </div>
         </div>
     </div>
