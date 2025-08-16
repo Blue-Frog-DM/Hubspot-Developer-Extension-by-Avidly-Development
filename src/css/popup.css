@@ -175,6 +175,13 @@ a:hover {
   font-size: 0.75rem;
 }
 
+button[disabled],
+select[disabled],
+input[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .button-grid {
   display: grid;
   grid-template-columns: 1fr;
