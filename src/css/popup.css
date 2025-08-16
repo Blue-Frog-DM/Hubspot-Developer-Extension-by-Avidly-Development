@@ -13,9 +13,11 @@ body {
   font-family: var(--font-family);
   color: var(--body);
   background: url("../images/bf-avidly theme-hero.png");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 490px;
+  height: 490px;
 }
 
 .container {
@@ -32,7 +34,6 @@ body {
 }
 
 .tab-btn.btn {
-  border: none;
   background: none;
   padding: 8px !important;
   cursor: pointer;
@@ -49,24 +50,24 @@ body {
 }
 
 .tab-btn.btn.active {
-background: var(--primary);
-    color: #fff;
-    -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
-    transform-style: preserve-3d;
-    cursor: pointer;
-    overflow: hidden;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+  background: var(--primary);
+  color: #fff;
+  -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  overflow: visible;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .tab-content {
   display: none;
-  padding: 16px;
+  padding: 0;
   border-radius: 8px;
   min-height: 300px;
 }
@@ -121,28 +122,28 @@ a {
   padding: 8px;
   border-radius: 4px;
   transition: all 0.2s ease;
+  border: 1px solid transparent;
 }
 
 a:hover {
   color: var(--secondary);
-  border: none!important;
 }
 
 #docs a:hover,
 #community a:hover {
-    background: var(--primary);
-    color: #fff;
-    -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1)!important;
-    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
-    transform-style: preserve-3d;
-    cursor: pointer;
-    overflow: hidden;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+  background: var(--primary);
+  color: #fff;
+  -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .btn {
@@ -162,8 +163,8 @@ a:hover {
 .btn-1,
 .btn-2 {
   background: transparent;
-    border: 1px solid var(--secondary);
-    color: var(--primary);
+  border: 1px solid var(--secondary);
+  color: var(--primary);
 }
 
 .btn-1 {
@@ -193,16 +194,16 @@ input[disabled] {
 .button-grid button {
   width: 100%;
   height: auto;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   padding: 10px;
   padding-right: 10px;
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .button-grid button:hover {
-background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .language-selector {
@@ -222,7 +223,7 @@ background: rgba(255, 255, 255, 0.08);
   background: #fff;
   color: var(--dark);
   font-family: var(--font-family);
-      background: transparent;
+  background: transparent;
 }
 
 .message {
@@ -235,18 +236,18 @@ background: rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   margin-top: 8px;
   background: var(--primary);
-    color: #fff;
-    -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
-    transform-style: preserve-3d;
-    cursor: pointer;
-    overflow: hidden;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+  color: #fff;
+  -webkit-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  -moz-box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  box-shadow: 0 10px 32px 0 rgba(1, 66, 97, 0.11);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 /* Apply button styles to all buttons */
