@@ -144,7 +144,7 @@ h4.section-title {
 
 .section h3 {
   color: var(--primary);
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   margin: 0;
@@ -154,7 +154,7 @@ a.link-tab {
   color: var(--secondary);
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   padding-left: 16px;
 }
@@ -174,7 +174,7 @@ a.link-tab:focus {
   text-transform: none;
   transition: all 0.3s ease;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
 }
