@@ -37,8 +37,8 @@ body {
 .tabs {
   display: flex;
   gap: 12px;
-  border-bottom: 2px solid var(--light);
-  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
   position: relative;
 }
 
@@ -125,13 +125,14 @@ h4.section-title {
   line-height: normal;
   margin: 0;
   margin-bottom: 24px;
+  margin-top: 4px;
 }
 /* Remove background images for cleaner design */
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   padding: 0;
   border-radius: 0;
   margin-bottom: 24px;
@@ -143,7 +144,7 @@ h4.section-title {
 
 .section h3 {
   color: var(--primary);
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   margin: 0;
@@ -153,16 +154,15 @@ a.link-tab {
   color: var(--secondary);
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 18px;
-  font-style: normal;
+  font-size: 16px;
   font-weight: 500;
+  padding-left: 16px;
 }
 
 a.link-tab:hover,
 a.link-tab:active,
 a.link-tab:focus {
-  color: var(--primary);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .button-grid button.btn {
@@ -174,7 +174,7 @@ a.link-tab:focus {
   text-transform: none;
   transition: all 0.3s ease;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   border-radius: 4px;
 }
@@ -261,7 +261,6 @@ a.link-tab:focus {
   color: var(--primary);
   font-size: 14px;
   text-align: center;
-  margin-top: 12px;
   background: #FF5C3533;
   border-radius: 34px;
   padding-top: 10px;
