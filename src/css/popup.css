@@ -162,8 +162,7 @@ a.link-tab {
 a.link-tab:hover,
 a.link-tab:active,
 a.link-tab:focus {
-  color: var(--primary);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .button-grid button.btn {
