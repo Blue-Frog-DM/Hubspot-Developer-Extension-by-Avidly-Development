@@ -17,7 +17,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '37 9 * * 2'
+    - cron: '00 9 * * 2'
 
 jobs:
   analyze:
@@ -57,11 +57,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # Add any setup steps before running the `github/codeql-action/init` action.
-    # This includes steps like installing compilers or runtimes (`actions/setup-node`
-    # or others). This is typically only required for manual builds.
-    # - name: Setup runtime (example)
-    #   uses: actions/setup-example@v1
+    # Set up Node.js for dependency installation
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm ci
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
@@ -74,7 +79,7 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
 
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
-        # queries: security-extended,security-and-quality
+        queries: security-extended,security-and-quality
 
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above

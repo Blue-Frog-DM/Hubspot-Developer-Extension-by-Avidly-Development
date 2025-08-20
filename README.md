@@ -31,17 +31,62 @@
 
 *Not yet published. We'll update this section when the extension is live on the Chrome Web Store.*
 
-### From source (development)
+### Development Setup
 
 1. Clone this repository:
-
    ```bash
    git clone https://github.com/Blue-Frog-DM/Hubspot-Developer-Extension-by-Avidly-Development.git
+   cd Hubspot-Developer-Extension-by-Avidly-Development
    ```
-2. In Chrome, open `chrome://extensions/` and enable **Developer mode**.
-3. Click **Load unpacked** and select the `src` folder.
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the extension:
+   ```bash
+   npm run build
+   ```
+   This will create a `dist` folder with the built extension.
+
+4. Load in Chrome:
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode" in the top-right corner
+   - Click "Load unpacked" in the top-left
+   - Select the `dist` folder from your project directory
 
 The extension icon will appear in your toolbar once loading completes.
+
+### Development Workflow
+
+1. **Making Changes**:
+   - All development work should be done in the `src` folder
+   - Never modify files in the `dist` folder (they get overwritten)
+
+2. **Building**:
+   - After making changes, run `npm run build`
+   - This will:
+     - Clean the existing `dist` folder
+     - Copy updated files from `src` to `dist`
+
+3. **Testing Changes**:
+   - After building, go to `chrome://extensions/`
+   - Find your extension card
+   - Click the refresh icon (🔄)
+   - Test your changes in Chrome
+
+4. **Project Structure**:
+   ```
+   src/               # Source files (development)
+   ├── manifest.json  # Extension manifest
+   ├── popup.html    # Main interface
+   ├── css/         
+   ├── js/          
+   └── images/       # Icons & assets
+   
+   dist/              # Built files (generated)
+   └── [...]         # Copy of src/ (do not edit)
 
 ## Usage
 
@@ -63,14 +108,18 @@ The extension icon will appear in your toolbar once loading completes.
 ## Project Structure
 
 ```
-src/
-├── manifest.json      # Extension manifest
-├── popup.html         # Main interface
-├── css/
-│   └── popup.css
-├── js/
-│   └── popup.js
-└── images/            # Icons & screenshots
+├── src/              # Source files (development)
+│   ├── manifest.json # Extension manifest
+│   ├── popup.html    # Main interface
+│   ├── css/
+│   │   └── popup.css
+│   ├── js/
+│   │   ├── popup.js
+│   │   └── content.js
+│   └── images/       # Icons & assets
+│
+└── dist/             # Built files (generated, do not edit)
+    └── [...]        # Copy of src/ after build
 ```
 
 ## Contributing
