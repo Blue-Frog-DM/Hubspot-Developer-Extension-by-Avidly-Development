@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>HubSpot Developer Tools</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/popup.css">
 </head>
 <body>
     <div class="container">
         <div class="tabs">
-            <button class="tab-btn btn btn-1 active" data-tab="dev-tools" id="dev-tools-tab" aria-selected="true" aria-controls="dev-tools">Tools</button>
-            <button class="tab-btn btn btn-1" data-tab="docs" id="docs-tab" aria-selected="false" aria-controls="docs">Documentation</button>
-            <button class="tab-btn btn btn-1" data-tab="community" id="community-tab" aria-selected="false" aria-controls="community">Community &amp; Support</button>
+            <button class="tab-btn btn-1 active" data-tab="dev-tools">
+                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.4209 22.8063C18.2764 22.8063 18.141 22.7837 18.0146 22.7385C17.8882 22.6934 17.7709 22.6167 17.6625 22.5083L12.1375 16.9833C12.0292 16.875 11.9525 16.7576 11.9073 16.6313C11.8622 16.5049 11.8396 16.3694 11.8396 16.225C11.8396 16.0806 11.8622 15.9451 11.9073 15.8188C11.9525 15.6924 12.0292 15.575 12.1375 15.4667L14.4396 13.1646C14.5479 13.0563 14.6653 12.9795 14.7917 12.9344C14.9181 12.8892 15.0535 12.8667 15.1979 12.8667C15.3424 12.8667 15.4778 12.8892 15.6042 12.9344C15.7306 12.9795 15.8479 13.0563 15.9563 13.1646L21.4813 18.6896C21.5896 18.7979 21.6663 18.9153 21.7115 19.0417C21.7566 19.1681 21.7792 19.3035 21.7792 19.4479C21.7792 19.5924 21.7566 19.7278 21.7115 19.8542C21.6663 19.9806 21.5896 20.0979 21.4813 20.2063L19.1792 22.5083C19.0709 22.6167 18.9535 22.6934 18.8271 22.7385C18.7007 22.7837 18.5653 22.8063 18.4209 22.8063ZM18.4209 20.2333L19.2063 19.4479L15.225 15.4667L14.4396 16.2521L18.4209 20.2333ZM3.5521 22.8333C3.40766 22.8333 3.26773 22.8063 3.13231 22.7521C2.9969 22.6979 2.87502 22.6167 2.76669 22.5083L0.491687 20.2333C0.383354 20.125 0.302104 20.0031 0.247937 19.8677C0.19377 19.7323 0.166687 19.5924 0.166687 19.4479C0.166687 19.3035 0.19377 19.1681 0.247937 19.0417C0.302104 18.9153 0.383354 18.7979 0.491687 18.6896L6.23335 12.9479H8.53544L9.45627 12.0271L4.98752 7.55834H3.44377L0.166687 4.28125L3.2271 1.22084L6.50419 4.49792V6.04167L10.9729 10.5104L14.1146 7.36875L12.95 6.20417L14.4667 4.6875H11.4063L10.6479 3.92917L14.4938 0.0833359L15.2521 0.841669V3.90209L16.7688 2.38542L20.6146 6.23125C20.9215 6.5382 21.1563 6.88577 21.3188 7.27396C21.4813 7.66216 21.5625 8.07292 21.5625 8.50625C21.5625 8.93959 21.4813 9.35486 21.3188 9.75209C21.1563 10.1493 20.9215 10.5014 20.6146 10.8083L18.3125 8.50625L16.7959 10.0229L15.6584 8.88542L10.0521 14.4917V16.7667L4.31044 22.5083C4.2021 22.6167 4.08474 22.6979 3.95835 22.7521C3.83196 22.8063 3.69655 22.8333 3.5521 22.8333ZM3.5521 20.2333L8.15627 15.6292V14.8438H7.37085L2.76669 19.4479L3.5521 20.2333ZM3.5521 20.2333L2.76669 19.4479L3.17294 19.8271L3.5521 20.2333Z" fill="#F6F9FC"/>
+                </svg>
+            </button>
+            <button class="tab-btn btn-1" data-tab="docs">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.83335 13.1667H13.1667V11H8.83335V13.1667ZM8.83335 9.91666H17.5V7.75H8.83335V9.91666ZM8.83335 6.66666H17.5V4.5H8.83335V6.66666ZM6.66669 17.5C6.07085 17.5 5.56078 17.2878 5.13648 16.8635C4.71217 16.4392 4.50002 15.9292 4.50002 15.3333V2.33333C4.50002 1.7375 4.71217 1.22743 5.13648 0.803122C5.56078 0.378817 6.07085 0.166664 6.66669 0.166664H19.6667C20.2625 0.166664 20.7726 0.378817 21.1969 0.803122C21.6212 1.22743 21.8334 1.7375 21.8334 2.33333V15.3333C21.8334 15.9292 21.6212 16.4392 21.1969 16.8635C20.7726 17.2878 20.2625 17.5 19.6667 17.5H6.66669ZM6.66669 15.3333H19.6667V2.33333H6.66669V15.3333ZM2.33335 21.8333C1.73752 21.8333 1.22745 21.6212 0.803145 21.1969C0.37884 20.7726 0.166687 20.2625 0.166687 19.6667V4.5H2.33335V19.6667H17.5V21.8333H2.33335Z" fill="#213343"/>
+                </svg>
+            </button>
+            <button class="tab-btn btn-1" data-tab="community">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.91669 13.1667H12.0834V9.91666H15.3334V7.75H12.0834V4.5H9.91669V7.75H6.66669V9.91666H9.91669V13.1667ZM0.166687 21.8333V2.33333C0.166687 1.7375 0.37884 1.22743 0.803145 0.803122C1.22745 0.378817 1.73752 0.166664 2.33335 0.166664H19.6667C20.2625 0.166664 20.7726 0.378817 21.1969 0.803122C21.6212 1.22743 21.8334 1.7375 21.8334 2.33333V15.3333C21.8334 15.9292 21.6212 16.4392 21.1969 16.8635C20.7726 17.2878 20.2625 17.5 19.6667 17.5H4.50002L0.166687 21.8333ZM3.57919 15.3333H19.6667V2.33333H2.33335V16.5521L3.57919 15.3333Z" fill="#213343"/>
+                </svg>
+            </button>
+            <div class="tab-btn-float-right">
+                <button class="tab-btn btn-1 float-right" data-tab="settings">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.4 13.9L8.91667 12.3563L6.56042 10L8.91667 7.64375L7.4 6.1L3.5 10L7.4 13.9ZM12.6 13.9L16.5 10L12.6 6.1L11.0833 7.64375L13.4396 10L11.0833 12.3563L12.6 13.9ZM2.41667 19.75C1.82083 19.75 1.31076 19.5378 0.886458 19.1135C0.462153 18.6892 0.25 18.1792 0.25 17.5833V2.41667C0.25 1.82083 0.462153 1.31076 0.886458 0.886458C1.31076 0.462153 1.82083 0.25 2.41667 0.25H17.5833C18.1792 0.25 18.6892 0.462153 19.1135 0.886458C19.5378 1.31076 19.75 1.82083 19.75 2.41667V17.5833C19.75 18.1792 19.5378 18.6892 19.1135 19.1135C18.6892 19.5378 18.1792 19.75 17.5833 19.75H2.41667ZM2.41667 17.5833H17.5833V2.41667H2.41667V17.5833Z" fill="#213343"/>
+                    </svg>
+                </button>
+            </div>
         </div>
 
-        <div class="tab-content active" id="dev-tools" role="tabpanel" aria-labelledby="dev-tools-tab">
+        <div class="tab-content active" id="dev-tools">
+            <div class="header-section">
+                <h4 class="section-title">Tools</h4>
+            </div>
             <div class="button-grid section">
-                <button class="btn btn-2" id="bypassCache">Clear Cache</button>
-                <button class="btn btn-2" id="activateDev">Enable Developer Mode</button>
+                <div class="orange-group">
+                    <button class="btn btn-2" id="bypassCache">Clear Cache</button>
+                    <button class="btn btn-2" id="activateDev">Enable Developer Mode</button>
+                </div>
                 <div class="button__group">
                     <button class="btn btn-2" id="enableDebug">Debug Mode</button>
                     <button class="btn btn-2" id="showDebugOnly">Only Debug Info</button>
@@ -34,33 +60,79 @@
             </div>
         </div>
 
-        <div class="tab-content" id="docs" role="tabpanel" aria-labelledby="docs-tab">
-            <div class="section">
-                <h3>Core Development</h3>
-                <a href="https://developers.hubspot.com/docs/reference/api/overview" target="_blank">CRM API Reference</a>
-                <a href="https://developers.hubspot.com/docs/guides/cms/overview" target="_blank">CMS Developer Docs</a>
-                <a href="https://developers.hubspot.com/docs/reference/cms/hubl/overview" target="_blank">HubL Documentation</a>
+        <div class="tab-content" id="docs">
+            <div class="header-section">
+                <h4 class="section-title">Documentation</h4>
             </div>
             <div class="section">
-                <h3>Integrations &amp; Auth</h3>
-                <a href="https://developers.hubspot.com/docs/guides/api/app-management/webhooks" target="_blank">Webhooks Guide</a>
-                <a href="https://developers.hubspot.com/docs/guides/apps/authentication/working-with-oauth" target="_blank">OAuth Overview</a>
+                <h3>API Documentation</h3>
+                <a class="link-tab" href="https://developers.hubspot.com/docs/api/overview" target="_blank">CRM API Reference</a>
+                <a class="link-tab" href="https://developers.hubspot.com/docs/cms/overview" target="_blank">CMS Developer Docs</a>
+                <a class="link-tab" href="https://developers.hubspot.com/docs/api/webhooks" target="_blank">Webhooks Guide</a>
+                <a class="link-tab" href="https://developers.hubspot.com/docs/api/oauth-quickstart" target="_blank">OAuth Overview</a>
             </div>
-        </div>
-
-        <div class="tab-content" id="community" role="tabpanel" aria-labelledby="community-tab">
             <div class="section">
-                <h3>Community &amp; Support</h3>
-                <a href="https://status.hubspot.com/" target="_blank">Status Page</a>
-                <a href="https://community.hubspot.com/t5/HubSpot-Developer-Support/ct-p/developers" target="_blank">Developer Announcements</a>
-                <a href="https://community.hubspot.com/t5/CMS-Development/bd-p/designers_support/label-name/Documentation" target="_blank">CMS Development Tips</a>
-                <a href="https://community.hubspot.com/t5/APIs-Integrations/bd-p/integrations" target="_blank">APIs &amp; Integrations Forum</a>
-                <a href="https://community.hubspot.com/t5/Tips-Tricks-Best-Practices/bd-p/marketing_bestpractice/label-name/Workflows" target="_blank">Workflow Automation Forum</a>
-                <a href="https://community.hubspot.com/t5/HubSpot-Ideas/idb-p/HubSpot_Ideas" target="_blank">HubSpot Developer Ideas</a>
-                <a href="https://github.com/HubSpot" target="_blank">HubSpot Repos</a>
+                <h3>Template Language</h3>
+                <a class="link-tab" href="https://developers.hubspot.com/docs/cms/hubl" target="_blank">HubL Documentation</a>
             </div>
         </div>
 
+        <div class="tab-content" id="community">
+            <div class="header-section">
+                <h4 class="section-title">Community</h4>
+            </div>
+            <div class="section">
+                <h3>Community Resources</h3>
+                <a class="link-tab" href="https://community.hubspot.com/t5/Developer-Forum/ct-p/developers" target="_blank">Developer Announcements</a>
+                <a class="link-tab" href="https://community.hubspot.com/t5/CMS-Development/bd-p/cms-development" target="_blank">CMS Development Tips</a>
+                <a class="link-tab" href="https://community.hubspot.com/t5/APIs-Integrations/bd-p/integration-forum" target="_blank">CRM Customization Questions</a>
+                <a class="link-tab" href="https://community.hubspot.com/t5/Workflows/bd-p/workflows" target="_blank">Workflow Automation Examples</a>
+            </div>
+        </div>
+        <div class="tab-content" id="settings">
+            <div class="header-section">
+                <h4 class="section-title">Developer</h4>
+            </div>
+            <div class="section-special_btn">
+                <div class="bg-btn github_btn">
+                    <a href="https://github.com/Blue-Frog-DM/Hubspot-Developer-Extension-by-Avidly-Development"
+                        target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <g clip-path="url(#clip0_10038_259)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.0149 0C8.05312 0 0 8.11249 0 18.1488C0 26.1713 5.15991 32.9622 12.3181 35.3657C13.213 35.5464 13.5409 34.9752 13.5409 34.4947C13.5409 34.0739 13.5114 32.6318 13.5114 31.1291C8.50005 32.211 7.45649 28.9657 7.45649 28.9657C6.65114 26.8623 5.45786 26.3217 5.45786 26.3217C3.81766 25.2099 5.57734 25.2099 5.57734 25.2099C7.39675 25.3301 8.35144 27.0729 8.35144 27.0729C9.96177 29.837 12.5567 29.056 13.6006 28.5751C13.7496 27.4033 14.2271 26.592 14.7341 26.1414C10.7373 25.7207 6.53203 24.1583 6.53203 17.1871C6.53203 15.2039 7.24741 13.5814 8.38094 12.3196C8.2021 11.8689 7.57559 10.0057 8.56015 7.5118C8.56015 7.5118 10.0812 7.03095 13.511 9.37472C14.9794 8.97745 16.4937 8.77536 18.0149 8.77366C19.536 8.77366 21.0866 8.98422 22.5184 9.37472C25.9485 7.03095 27.4696 7.5118 27.4696 7.5118C28.4542 10.0057 27.8273 11.8689 27.6485 12.3196C28.8119 13.5814 29.4978 15.2039 29.4978 17.1871C29.4978 24.1583 25.2925 25.6904 21.2658 26.1414C21.9222 26.7122 22.4886 27.7938 22.4886 29.5066C22.4886 31.9404 22.4591 33.8936 22.4591 34.4943C22.4591 34.9752 22.7873 35.5464 23.6818 35.366C30.84 32.9618 35.9999 26.1713 35.9999 18.1488C36.0294 8.11249 27.9468 0 18.0149 0Z"
+                                    fill="#24292F" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_10038_259">
+                                    <rect width="36" height="36" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="title_under">GitHub</span>
+                    </a>
+                </div>
+                <div class="bg-btn slack_btn">
+                    <a href="https://developers.hubspot.com/docs/getting-started/slack/developer-slack"
+                        target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1413 0.0886688C12.6702 0.0891063 12.2037 0.182351 11.7686 0.363077C11.3335 0.543804 10.9383 0.808472 10.6054 1.14197C10.2726 1.47546 10.0088 1.87125 9.82894 2.30673C9.6491 2.74221 9.55681 3.20885 9.55734 3.68C9.5569 4.1511 9.64925 4.61767 9.82913 5.05307C10.009 5.48847 10.2729 5.88418 10.6057 6.21761C10.9385 6.55103 11.3337 6.81564 11.7688 6.99632C12.2038 7.17701 12.6702 7.27023 13.1413 7.27067H16.7253V3.68C16.7259 3.20885 16.6336 2.74221 16.4537 2.30673C16.2739 1.87125 16.01 1.47546 15.6772 1.14197C15.3444 0.808472 14.9492 0.543804 14.514 0.363077C14.0789 0.182351 13.6125 0.0891063 13.1413 0.0886688ZM13.1413 9.66534H3.584C3.11291 9.66577 2.64651 9.759 2.21144 9.93968C1.77637 10.1204 1.38116 10.385 1.04835 10.7184C0.715545 11.0518 0.451672 11.4475 0.271796 11.8829C0.0919198 12.3183 -0.000435711 12.7849 2.232e-06 13.256C-0.000523322 13.7272 0.0917675 14.1938 0.271604 14.6293C0.451441 15.0648 0.715301 15.4605 1.04811 15.794C1.38093 16.1275 1.77618 16.3922 2.21129 16.5729C2.6464 16.7537 3.11285 16.8469 3.584 16.8473H13.1413C13.6125 16.8469 14.0789 16.7537 14.514 16.5729C14.9492 16.3922 15.3444 16.1275 15.6772 15.794C16.01 15.4605 16.2739 15.0648 16.4537 14.6293C16.6336 14.1938 16.7259 13.7272 16.7253 13.256C16.7258 12.7849 16.6334 12.3183 16.4535 11.8829C16.2737 11.4475 16.0098 11.0518 15.677 10.7184C15.3442 10.385 14.949 10.1204 14.5139 9.93968C14.0788 9.759 13.6124 9.66577 13.1413 9.66534Z" fill="#44BEDF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.8401 13.256C35.8405 12.7849 35.7482 12.3183 35.5683 11.8829C35.3884 11.4475 35.1245 11.0518 34.7917 10.7184C34.4589 10.385 34.0637 10.1204 33.6286 9.93968C33.1936 9.759 32.7272 9.66577 32.2561 9.66534C31.785 9.66577 31.3186 9.759 30.8835 9.93968C30.4485 10.1204 30.0532 10.385 29.7204 10.7184C29.3876 11.0518 29.1238 11.4475 28.9439 11.8829C28.764 12.3183 28.6716 12.7849 28.6721 13.256V16.8473H32.2561C32.7272 16.8469 33.1937 16.7537 33.6288 16.5729C34.0639 16.3922 34.4592 16.1275 34.792 15.794C35.1248 15.4605 35.3886 15.0648 35.5685 14.6293C35.7483 14.1938 35.8406 13.7272 35.8401 13.256ZM26.2827 13.256V3.68C26.2833 3.20885 26.191 2.74221 26.0111 2.30673C25.8313 1.87125 25.5675 1.47546 25.2346 1.14197C24.9018 0.808472 24.5066 0.543804 24.0715 0.363077C23.6364 0.182351 23.1699 0.0891063 22.6987 0.0886688C22.2276 0.0891063 21.7611 0.182351 21.326 0.363077C20.8909 0.543804 20.4957 0.808472 20.1629 1.14197C19.83 1.47546 19.5662 1.87125 19.3863 2.30673C19.2065 2.74221 19.1142 3.20885 19.1147 3.68V13.256C19.1142 13.7272 19.2065 14.1938 19.3863 14.6293C19.5662 15.0648 19.83 15.4605 20.1629 15.794C20.4957 16.1275 20.8909 16.3922 21.326 16.5729C21.7611 16.7537 22.2276 16.8469 22.6987 16.8473C23.1699 16.8469 23.6364 16.7537 24.0715 16.5729C24.5066 16.3922 24.9018 16.1275 25.2346 15.794C25.5675 15.4605 25.8313 15.0648 26.0111 14.6293C26.191 14.1938 26.2833 13.7272 26.2827 13.256Z" fill="#2EB67D"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.6987 36C23.1699 35.9996 23.6364 35.9063 24.0715 35.7256C24.5066 35.5449 24.9018 35.2802 25.2346 34.9467C25.5675 34.6132 25.8313 34.2174 26.0111 33.7819C26.191 33.3465 26.2833 32.8798 26.2827 32.4087C26.2832 31.9376 26.1908 31.471 26.011 31.0356C25.8311 30.6002 25.5672 30.2045 25.2344 29.8711C24.9016 29.5376 24.5064 29.273 24.0713 29.0923C23.6362 28.9117 23.1698 28.8184 22.6987 28.818H19.1147V32.4087C19.1142 32.8798 19.2065 33.3465 19.3863 33.7819C19.5662 34.2174 19.83 34.6132 20.1629 34.9467C20.4957 35.2802 20.8909 35.5449 21.326 35.7256C21.7611 35.9063 22.2276 35.9996 22.6987 36ZM22.6987 26.4233H32.2561C32.7272 26.4229 33.1936 26.3297 33.6286 26.149C34.0637 25.9683 34.4589 25.7037 34.7917 25.3703C35.1245 25.0368 35.3884 24.6411 35.5683 24.2057C35.7482 23.7703 35.8405 23.3038 35.8401 22.8327C35.8406 22.3615 35.7483 21.8949 35.5685 21.4594C35.3886 21.0239 35.1248 20.6281 34.792 20.2946C34.4592 19.9611 34.0639 19.6965 33.6288 19.5157C33.1937 19.335 32.7272 19.2418 32.2561 19.2413H22.6987C22.2276 19.2418 21.7611 19.335 21.326 19.5157C20.8909 19.6965 20.4957 19.9611 20.1629 20.2946C19.83 20.6281 19.5662 21.0239 19.3863 21.4594C19.2065 21.8949 19.1142 22.3615 19.1147 22.8327C19.1143 23.3038 19.2067 23.7703 19.3865 24.2057C19.5664 24.6411 19.8303 25.0368 20.1631 25.3703C20.4959 25.7037 20.8911 25.9683 21.3262 26.149C21.7613 26.3297 22.2277 26.4229 22.6987 26.4233Z" fill="#ECB22E"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.03766e-06 22.8327C-0.000434905 23.3038 0.0919206 23.7703 0.271797 24.2057C0.451672 24.6411 0.715546 25.0368 1.04835 25.3703C1.38116 25.7037 1.77638 25.9683 2.21144 26.149C2.64651 26.3297 3.11291 26.4229 3.584 26.4233C4.0551 26.4229 4.5215 26.3297 4.95656 26.149C5.39163 25.9683 5.78685 25.7037 6.11966 25.3703C6.45246 25.0368 6.71633 24.6411 6.89621 24.2057C7.07609 23.7703 7.16844 23.3038 7.168 22.8327V19.2413H3.584C3.1128 19.2418 2.64629 19.335 2.21114 19.5158C1.77598 19.6966 1.3807 19.9613 1.04788 20.2949C0.715057 20.6284 0.451211 21.0243 0.271414 21.4599C0.0916161 21.8954 -0.000610147 22.3615 3.03766e-06 22.8327ZM9.55734 22.8327V32.4087C9.55681 32.8798 9.6491 33.3465 9.82894 33.7819C10.0088 34.2174 10.2726 34.6132 10.6055 34.9467C10.9383 35.2802 11.3335 35.5449 11.7686 35.7256C12.2037 35.9063 12.6702 35.9996 13.1413 36C13.6125 35.9996 14.0789 35.9063 14.5141 35.7256C14.9492 35.5449 15.3444 35.2802 15.6772 34.9467C16.01 34.6132 16.2739 34.2174 16.4537 33.7819C16.6336 33.3465 16.7259 32.8798 16.7253 32.4087V22.8333C16.7259 22.3622 16.6336 21.8955 16.4537 21.4601C16.2739 21.0246 16.01 20.6288 15.6772 20.2953C15.3444 19.9618 14.9492 19.6971 14.5141 19.5164C14.0789 19.3357 13.6125 19.2424 13.1413 19.242C12.6702 19.2424 12.2037 19.3357 11.7686 19.5164C11.3335 19.6971 10.9383 19.9618 10.6055 20.2953C10.2726 20.6288 10.0088 21.0246 9.82894 21.4601C9.6491 21.8955 9.55681 22.3615 9.55734 22.8327Z" fill="#E01E5A"/>
+                        </svg>
+                        <span class="title_under">Slack</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Updates</h3>
+                <a class="link-tab" href="#" target="_blank">Review us on the Chrome Store</a>
+            </div>
+            <div class="section bottom-section">
+                <span class="bottom-text">Created by the community, for the community.</span>
+            </div>
+        </div>
     </div>
     <script src="js/popup.js"></script>
 </body>
