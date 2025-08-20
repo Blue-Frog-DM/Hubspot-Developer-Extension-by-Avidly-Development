@@ -27,11 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 1px solid #DBE4ED;
-  box-shadow: 0px 8px 12px 0px #00000033;
   background: #FFFFFF;
-  border-radius: 12px;
-  border-width: 1px;
   padding: 16px;
   min-height: 416px;
   overflow: hidden;
